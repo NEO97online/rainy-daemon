@@ -1,4 +1,4 @@
-# rainydaemon
+# rainy-daemon
 
 Play rain in the background.
 
@@ -14,8 +14,8 @@ Made for use as a button in bars such as [polybar](https://github.com/polybar/po
 First, ensure you have `mpg321` installed. On debian-based distros, you can run `sudo apt install mpg321`.
 
 ```bash
-git clone https://github.com/auderer/rainydaemon
-cd rainydaemon
+git clone https://github.com/auderer/rainy-daemon
+cd rainy-daemon
 chmod +x install.sh
 ./install.sh
 ```
