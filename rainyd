@@ -6,13 +6,13 @@
 # Github Profile: https://github.com/auderer
 # Project Repository: https://github.com/auderer/rainyday
 
-RAINYDAYPATH=${RAINYDAYPATH:-"$HOME/.config/rainyday"}
+RAINYDPATH=${RAINYDPATH:-"$HOME/.config/rainyd"}
 
-if pgrep -f rainydayplayer > /dev/null
+if pgrep -f rainydplayer > /dev/null
 then
-  pkill -f rainydayplayer &
+  pkill -f rainydplayer &
   echo "Toggled rain off."
 else 
-  exec -a rainydayplayer mpg123 -l 0 $RAINYDAYPATH/sounds/rain.mp3 &
+  exec -a rainydplayer mpg123 -l 0 $RAINYDPATH/sounds/rain.mp3 &
   echo "Toggled rain on."
 fi
