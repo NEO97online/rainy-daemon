@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+# rainyday
+# Version: 1.0.0
+# Author: Michael Auderer
+# Github Profile: https://github.com/auderer
+# Project Repository: https://github.com/auderer/rainyday
+
+RAINYDAYPATH=${RAINYDAYPATH:-"$HOME/.config/rainyday"}
+
+if pgrep -f rainydayplayer > /dev/null
+then
+  pkill -f rainydayplayer &
+  echo "Toggled rain off."
+else 
+  exec -a rainydayplayer mpg123 -l 0 $RAINYDAYPATH/sounds/rain.mp3 &
+  echo "Toggled rain on."
+fi

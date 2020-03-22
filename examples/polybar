@@ -1,0 +1,4 @@
+[module/rainyday]
+    type = custom/text
+    content =  toggle rain
+    click-left = bash -c "exec rainyday"
